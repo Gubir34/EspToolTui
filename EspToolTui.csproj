@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="esptool.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="esptool.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Spectre.Console" Version="0.54.0" />
+    <PackageReference Include="System.IO.Ports" Version="10.0.3" />
+    <EmbeddedResource Include="firmware\micropython-esp32.bin" />
+    <EmbeddedResource Include="firmware\micropython-esp8266.bin" />
+  </ItemGroup>
+
+</Project>
